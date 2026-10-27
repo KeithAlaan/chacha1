@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charisse S. Toring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="link" href="#top">Home</a>
+    <a class="link" href="#about">About</a>
+    <a class="link" href="#hobbies">Hobbies</a>
+    <a class="link" href="#skills">Skills</a>
+    <a class="link" href="#games">Games</a>
+    <a class="link" href="#mood">Mood</a>
+    <a class="link" href="#contact">Contact</a>
+    <span class="spacer"></span>
+    <button class="btn" id="themeBtn" aria-pressed="false">🌙 Night mode</button>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <p class="hi" aria-live="polite"><span id="typed"></span><span class="caret" aria-hidden="true"></span></p>
+      <h1 class="name" id="name" aria-label="Charisse S. Toring"></h1>
+      <p class="tag">Student, creative thinker, and professional snack enthusiast. Poke around: this page has secrets.</p>
+      <div class="actions">
+        <a class="btn pink" href="#about" style="text-decoration:none">Meet me</a>
+        <button class="btn" id="confettiBtn">Surprise me 🎉</button>
+      </div>
+      <p class="hint">Tip: click the letters of my name. Then find the 5 hidden stickers <button class="sticker" data-s="1" data-msg="Sticker 1 found! ⭐" aria-label="Hidden sticker 1">⭐</button></p>
+    </div>
+    <div class="photo" title="That's me!">
+      <!-- Put your photo in the same folder and name it photo.jpg -->
+      <img src="chacha.jpg" alt="Photo of Charisse S. Toring" onerror="this.remove();document.querySelector('.photo').insertAdjacentHTML('beforeend','<span class=initials>CT</span>')">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About me</h2>
+    <p class="sub">The short version, then a random fact machine for the long one.</p>
+    <div class="about">
+      <div class="card">
+        <ul class="facts">
+          <li><b>Name</b> Charisse S. Toring</li>
+          <li><b>I study</b> Information Technology (HCI class)</li>
+          <li><b>Based in</b> Cebu City, Philippines</li>
+          <li><b>Fuel</b> Coffee and music <button class="sticker" data-s="2" data-msg="Sticker 2 found! ☕" aria-label="Hidden sticker 2" style="font-size:1.2rem">☕</button></li>
+          <li><b>Reach me</b> semblantecharisse69@gmail.com</li>
+        </ul>
+      </div>
+      <div class="card factbox">
+        <p id="factText">Tap the button to learn something random about me.</p>
+        <button class="btn" id="factBtn">Tell me a fact</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hobbies">
+  <div class="wrap">
+    <h2>Hobbies and interests</h2>
+    <p class="sub">Tap a card to flip it.</p>
+    <div class="flips">
+      <button class="flip" data-music="vk2K1rwgIz4" aria-label="Music card, tap to flip and play music"><div class="in"><div class="f"><span class="e">🎧</span><strong>Music</strong><small>Tap to flip</small></div><div class="b">Playlists for every mood. Currently on repeat: whatever I can sing badly.</div></div></button>
+      <button class="flip" aria-label="Volleyball card, tap to flip"><div class="in"><div class="f"><span class="e">🏐</span><strong>Volleyball</strong><small>Tap to flip</small></div><div class="b photos"><div class="slides"><img src="vb.jpg" alt="Volleyball player in a ready stance on the court" style="object-position:center 50%"><img src="vb1.jpg" alt="Volleyball player jumping to spike at the net" style="object-position:center 40%"><img src="vb3.jpg" alt="Volleyball player jumping to hit the ball outdoors" style="object-position:center 40%"></div><span class="cap">Spikes, sets, and the rush of a good rally.</span></div></div></button>
+      <button class="flip" aria-label="Mobile Legends card, tap to flip"><div class="in"><div class="f"><span class="e">🎮</span><strong>Mobile Legends</strong><small>Tap to flip</small></div><div class="b">Mobile Legends: Bang Bang is my game. Squad nights, rank grinding, and always saying "one more match."</div></div></button>
+      <button class="flip" aria-label="Travel card, tap to flip"><div class="in"><div class="f"><span class="e">🌴</span><strong>Island life</strong><small>Tap to flip</small></div><div class="b photos"><div class="slides"><img src="island1.jpg" alt="Sunset over the city and sea seen from a hilltop" style="object-position:center 58%"><img src="island2.jpg" alt="People swimming at a sandy beach" style="object-position:center 60%"><img src="island3.jpg" alt="Palm trees silhouetted against a dusk sky" style="object-position:center 62%"></div><span class="cap">Beaches, sunsets, and finding new food spots around Cebu. 🐚</span></div></div></button>
+    </div>
+    <p style="margin-top:22px">Psst, one of those cards hides something: <button class="sticker" data-s="3" data-msg="Sticker 3 found! 🌈" aria-label="Hidden sticker 3">🌈</button></p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="sub">Bars fill as you scroll to them. Hover a skill for a note.</p>
+    <div class="skills" id="skillList"></div>
+    <p style="margin-top:20px">Still here? Good sign. <button class="sticker" data-s="4" data-msg="Sticker 4 found! 🚀" aria-label="Hidden sticker 4">🚀</button></p>
+  </div>
+</section>
+
+<section id="games">
+  <div class="wrap">
+    <h2>Games</h2>
+    <p class="sub">Take a break. Buy low, sell high, and beat my scores (I made them easy to beat).</p>
+    <div class="tabs" role="tablist" id="tabs">
+      <button class="btn tab" role="tab" aria-selected="true" data-g="g1">💰 Buy and sell</button>
+      <button class="btn tab" role="tab" aria-selected="false" data-g="g2">🧩 Memory match</button>
+      <button class="btn tab" role="tab" aria-selected="false" data-g="g3">✊ Rock paper scissors</button>
+    </div>
+
+    <div class="game show" id="g1">
+      <div class="gstats"><span class="pill">Cash: ₱<span id="cash">100</span></span><span class="pill">Time: <span id="tm">30</span>s</span><span class="pill">Best: ₱<span id="bs">0</span></span><button class="btn pink" id="startMkt">Start</button></div>
+      <div class="market" id="market"></div>
+      <p id="mktOut" style="margin-top:14px;font-weight:700" aria-live="polite">Press Start. You have ₱100 and 30 seconds. Buy when prices drop, sell when they rise!</p>
+    </div>
+
+    <div class="game" id="g2">
+      <div class="gstats"><span class="pill">Moves: <span id="mv">0</span></span><span class="pill">Best: <span id="mbest">-</span></span><button class="btn pink" id="resetMem">New game</button></div>
+      <div class="mem" id="mem"></div>
+      <p id="memOut" style="margin-top:14px;font-weight:700" aria-live="polite">Flip two cards to find matching pairs.</p>
+    </div>
+
+    <div class="game" id="g3">
+      <div class="gstats"><span class="pill">You: <span id="rw">0</span></span><span class="pill">Me: <span id="rl">0</span></span><span class="pill">Ties: <span id="rt">0</span></span></div>
+      <div class="rps" id="rps">
+        <button class="btn" data-c="rock" aria-label="Rock">✊</button>
+        <button class="btn" data-c="paper" aria-label="Paper">✋</button>
+        <button class="btn" data-c="scissors" aria-label="Scissors">✌️</button>
+      </div>
+      <div class="card rpsout" id="rpsOut" aria-live="polite">Pick one to play against me.</div>
+    </div>
+  </div>
+</section>
+
+<section id="mood">
+  <div class="wrap">
+    <h2>Pick a mood</h2>
+    <p class="sub">I'll tell you how I'd spend the day.</p>
+    <div class="moods" id="moods">
+      <button class="btn mood" aria-pressed="false" data-m="chill">😌 Chill</button>
+      <button class="btn mood" aria-pressed="false" data-m="hype">🔥 Hyped</button>
+      <button class="btn mood" aria-pressed="false" data-m="focus">🧠 Focused</button>
+      <button class="btn mood" aria-pressed="false" data-m="hungry">🍜 Hungry</button>
+    </div>
+    <div class="card moodout" id="moodOut" aria-live="polite">Choose a mood above.</div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Say hello</h2>
+    <p class="sub" style="margin-inline:auto">Thanks for spending your time here.</p>
+    <div class="card">
+      <a class="mail" href="mailto:semblantecharisse69@gmail.com">semblantecharisse69@gmail.com</a>
+      <div class="row">
+        <button class="btn" id="copyBtn">Copy email</button>
+        <a class="btn pink" href="mailto:semblantecharisse69@gmail.com" style="text-decoration:none">Send a message</a>
+      </div>
+      <p style="margin-top:14px">Last sticker: <button class="sticker" data-s="5" data-msg="Sticker 5 found! 💎" aria-label="Hidden sticker 5">💎</button></p>
+      <div class="secret" id="secret">🎉 You found all 5 stickers! Secret unlocked: tell me "I found the stickers" and I'll tell you the story behind this design.</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Made by Charisse S. Toring for HCI</footer>
+
+<div class="hud" role="status"><span>Stickers</span><span class="dots" id="dots"><i></i><i></i><i></i><i></i><i></i></span><span id="count">0/5</span></div>
+<div class="nowplaying" id="nowPlaying" role="status">
+  <div class="top"><span>🎧 Now playing</span><button class="btn" id="stopMusic">Stop</button></div>
+  <div class="ytwrap"><div id="ytPlayer"></div></div>
+  <p class="ytmsg" id="ytMsg">If it doesn't start, press play on the little player.</p>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<canvas id="fx"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
